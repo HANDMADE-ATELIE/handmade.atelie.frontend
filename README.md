@@ -1,8 +1,9 @@
-# React + Vite
+# Requisitos para rodar o projeto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+* npm 10.2.4 ou superior
 
-Currently, two official plugins are available:
+# Como executar o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1- execute o comando 'npm install' dentro do diretório raiz do projeto
+
+Agora toda vez que você quiser executar o projeto basta executar o comando 'npm run dev'.
