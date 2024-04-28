@@ -6,4 +6,4 @@
 
 1- execute o comando 'npm install' dentro do diretório raiz do projeto
 
-Agora toda vez que você quiser executar o projeto basta executar o comando 'npm run dev'.
+Agora toda vez que você quiser executar o projeto, basta executar o comando 'npm run dev'.
