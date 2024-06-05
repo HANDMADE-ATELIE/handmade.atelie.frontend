@@ -1,9 +1,13 @@
-import './Home.css'
+import './Home.css';
+
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+    const { t } = useTranslation()
+
     return (
         <>
-            <h1>Home page</h1>
+            <h1>{t('homePage.title')}</h1>
         </>
     )
 }
