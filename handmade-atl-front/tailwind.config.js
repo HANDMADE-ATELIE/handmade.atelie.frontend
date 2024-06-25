@@ -10,17 +10,18 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    container: {
+    container: {},
+    extend: {
       screens: {
         "2xl": "1400px",
+        "sm": {'max': '480px'}
       },
-    },
-    extend: {
       colors: {
         'darkGreen': '#888C75',
         'lightBrown': '#BB9A77',
         'darkBrown': '#6D5133',
         'backColorWhite': '#fffdf1',
+        'backColorTest': '#D9D9D9',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

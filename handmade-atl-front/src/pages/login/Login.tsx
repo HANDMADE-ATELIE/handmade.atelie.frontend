@@ -12,6 +12,9 @@ import {
   FormMessage,
 } from "../../../@/components/ui/form"
 
+import axios from "axios";
+
+
 import logoImage from '../../../Logo.png';
  
 const formSchema = z.object({
@@ -29,20 +32,28 @@ function Login() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       userEmail: "",
+      userPassword: ""
     },
   })
 
-  const handleOnSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values);
+  const handleOnSubmit = async (values: z.infer<typeof formSchema>) => {
+
+    const responsValue = await axios.post('http://localhost:8080/auth/login', {
+      email: values.userEmail,
+      password: values.userPassword
+    })
+    
+
+    console.log(responsValue);
   };
 
   return (
     <>
       <main className="flex justify-center bg-lime-100 h-full items-center">
 
-        <section className="flex flex-col space-y-4 h-3/4 w-2/6">
+        <section className="flex flex-col space-y-4 h-3/4 w-2/6 sm:w-5/6">
 
-          <section className="bg-backColorWhite h-full w-full flex flex-col items-center justify-center gap-8 rounded-md">
+          <section className="flex flex-col bg-backColorWhite h-full w-full items-center justify-center gap-8 rounded-lg">
 
             <section className="bg-backColorWhite h-fit w-fit flex items-center justify-center rounded-full">
               <img src={logoImage}></img>

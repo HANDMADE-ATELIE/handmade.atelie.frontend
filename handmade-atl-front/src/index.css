@@ -73,13 +73,13 @@
     @apply bg-background text-foreground;
     height: 66rem;
     width: 100%;
-  }
 
-  #root {
-    margin: 0; 
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
+    @media screen and (max-width: 480px) {
+      height: 58.2rem;
+    }
+
+    @media screen and (min-width:360px) and (max-width: 390px) {
+      height: 52rem;
+    }
   }
 }
