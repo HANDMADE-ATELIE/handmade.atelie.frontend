@@ -1,6 +1,14 @@
 import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
 import { z } from "zod"
+
+import axios from "axios";
+import logoImage from '../../../Logo.png';
+ 
+import { useNavigate } from "react-router-dom";
+import { useCookies } from 'react-cookie';
+import { useEffect } from "react"
+import { useForm } from "react-hook-form"
+
 import { Button } from "../../../@/components/ui/button.tsx"
 import { Input } from "../../../@/components/ui/input.tsx"
 import {
@@ -12,11 +20,6 @@ import {
   FormMessage,
 } from "../../../@/components/ui/form"
 
-import axios from "axios";
-
-
-import logoImage from '../../../Logo.png';
- 
 const formSchema = z.object({
   userEmail: z.string().min(2, {
     message: "Username must be at least 2 characters.",
@@ -27,6 +30,15 @@ const formSchema = z.object({
 })
 
 function Login() {
+  const navigate = useNavigate();
+  const [cookies, setCookie, removeCookie] = useCookies(['user-token']);
+
+  useEffect(() => { 
+    
+    if (cookies["user-token"])
+      return navigate("/home");
+
+  }, [cookies]);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -43,8 +55,10 @@ function Login() {
       password: values.userPassword
     })
     
-
-    console.log(responsValue);
+    if (responsValue.data.token) {
+      setCookie('user-token', responsValue.data.token, { path: '/' });
+      return navigate("/home");
+    } 
   };
 
   return (
