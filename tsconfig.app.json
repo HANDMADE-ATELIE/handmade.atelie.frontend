@@ -29,5 +29,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "@/components/ui/**/*.tsx",
+    "@/components/ui/**/*.ts"
+  ]
 }
