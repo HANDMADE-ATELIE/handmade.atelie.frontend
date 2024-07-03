@@ -6,6 +6,7 @@ import Login from './pages/login/login.tsx';
 import Home from './pages/home/home.tsx';
 import Register from './pages/register/register.tsx';
 import App from './App.tsx';
+import ProductInfo from './pages/productInfo/productInfo.tsx';
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
     children: [
       {path: 'login', element: <Login/>}, 
       {path: 'home', element: <Home/>},
-      {path: 'register', element: <Register/>}
+      {path: 'register', element: <Register/>},
+      {path: 'productinfo', element: <ProductInfo/>}
     ],
   }
 ])
