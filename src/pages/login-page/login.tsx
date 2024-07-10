@@ -12,7 +12,7 @@ import { useForm } from "react-hook-form"
 import { Button } from "../../../@/components/ui/button.tsx"
 import { Input } from "../../../@/components/ui/input.tsx"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../../@/components/ui/form.tsx"
-import Register from "../register/register.tsx";
+import Register from "../user-register/register.tsx";
 import { Toaster, toast } from 'sonner'
 
 import {
@@ -22,7 +22,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../../../@/components/ui/dialog"
+} from "../../../@/components/ui/dialog.tsx"
 
 
 

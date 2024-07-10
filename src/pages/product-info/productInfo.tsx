@@ -1,5 +1,6 @@
 
 import { Button } from "../../../@/components/ui/button.tsx"
+import logoImage from '../../../caderno-teste.webp';
 
 export default function ProductInfo() {
  
@@ -9,36 +10,38 @@ export default function ProductInfo() {
 
       <main className="bg-backColorMain h-full w-full flex flex-row">
 
-        <section className="bg-darkGreen h-full w-1/2 flex items-center justify-center">
+        <section className="bg-backColorMain h-full w-1/2 flex items-center justify-center">
 
             <section className="bg-backColorMain h-[70%] w-[90%] flex items-center text-center justify-center">
-                <h1 className="text-darkGreen">Imagem Produto</h1>
+                <figure>
+                    <img src={logoImage}></img>
+                </figure>
             </section>
 
         </section>
         
-        <section className="bg-darkGreen h-full w-1/2 flex items-center justify-center">
+        <section className="bg-backColorMain h-full w-1/2 flex items-center justify-center">
 
-            <section className="bg-backColorMain h-[70%] w-[90%] flex flex-col">
-                <p className="p-6 py-7 text-start text-3xl font-extrabold text-[#6A6D5C]">Caderno Couro</p>
-                <p className="px-6 text-start text-2xl font-bold text-[#6A6D5C]">R$ 479,00</p>
+            <section className="bg-darkGreen h-[80%] w-[90%] flex flex-col rounded-md">
+                <p className="p-6 py-7 text-start text-3xl font-extrabold text-[#F5ECDB]">Caderno Couro</p>
+                <p className="px-6 text-start text-2xl font-bold text-[#F5ECDB]">R$ 479,00</p>
 
-                <pre className="px-6 py-5 text-start font-sans text-wrap text-[#6A6D5C]">
+                <pre className="px-6 py-5 text-start font-sans text-wrap text-[#F5ECDB]">
                     Um caderno estiloso e despojado, com sua capa de couro protege suas anotações de acidentes com água.
                     Um caderno estiloso e despojado, com sua capa de couro protege suas anotações de acidentes com água.
                     Um caderno estiloso e despojado, com sua capa de couro protege suas anotações de acidentes com água.
                 </pre>
 
-                <p className="p-5 text-start text-2xl font-extrabold text-[#6A6D5C]">Especificações</p>
-                <p className="px-5 text-start font-semibold text-[#6A6D5C]">Peso: 400g</p>
-                <p className="px-5 text-start font-semibold text-[#6A6D5C]">Folhas: 90und</p>
-                <p className="px-5 text-start font-semibold text-[#6A6D5C]">Dimensões: 210x297mm</p>
-                <p className="px-5 text-start font-semibold text-[#6A6D5C]">Capa: Couro Preto</p>
+                <p className="p-5 text-start text-2xl font-extrabold text-[#F5ECDB]">Especificações</p>
+                <p className="px-5 text-start font-semibold text-[#F5ECDB]">Peso: 400g</p>
+                <p className="px-5 text-start font-semibold text-[#F5ECDB]">Folhas: 90und</p>
+                <p className="px-5 text-start font-semibold text-[#F5ECDB]">Dimensões: 210x297mm</p>
+                <p className="px-5 text-start font-semibold text-[#F5ECDB]">Capa: Couro Preto</p>
 
                 <section className="items-center justify-center">
-                    <p className="p-6 py-5 text-start text-2xl font-extrabold text-[#6A6D5C]">Avaliações</p>
+                    <p className="p-6 py-5 text-start text-2xl font-extrabold text-[#F5ECDB]">Avaliações</p>
 
-                    <pre className="px-6 text-start font-sans text-wrap text-[#6A6D5C]">
+                    <pre className="px-6 text-start font-sans text-wrap text-[#F5ECDB]">
                         Avaliações 
                     </pre>
 

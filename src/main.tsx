@@ -2,21 +2,25 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Login from './pages/login/login.tsx';
-import Home from './pages/home/home.tsx';
-import Register from './pages/register/register.tsx';
+import Login from './pages/user-login/login.tsx';
+import Home from './pages/home-page/home.tsx';
+import Register from './pages/user-register/register.tsx';
 import App from './App.tsx';
-import ProductInfo from './pages/productInfo/productInfo.tsx';
+import ProductInfo from './pages/product-info/productInfo.tsx';
+import FinishOrder from './pages/finish-order/finish-order.tsx';
+import SuccessPage from './pages/sucess-page/success-page.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App/>,
     children: [
-      {path: 'login', element: <Login/>}, 
+      {path: 'user-login', element: <Login/>}, 
       {path: 'home', element: <Home/>},
-      {path: 'register', element: <Register/>},
-      {path: 'productinfo', element: <ProductInfo/>}
+      {path: 'user-register', element: <Register/>},
+      {path: 'product-info', element: <ProductInfo/>},
+      {path: 'finish-order', element: <FinishOrder/>},
+      {path: 'success-order', element: <SuccessPage/>}
     ],
   }
 ])
